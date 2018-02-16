@@ -21,8 +21,24 @@ public class Student
     public Student(String fullName, String studentID)
     {
         name = fullName;
-        id = studentID;
-        credits = 0;
+         if (fullName.length() < 4)
+       {
+           System.out.println("");
+           System.out.println("########################");
+           System.out.println("ERROR." );
+           System.out.println("");
+       }
+       id = studentID;
+       if (studentID.length() < 3)
+       {
+           System.out.println("");
+           System.out.println("STUDENT ID ERROR." );
+           System.out.println("The entered ID contains less than 3 numbers.");
+           System.out.println("");
+       }
+       System.out.println("########################");
+       System.out.println("");
+       credits = 0;
     }
 
     /**
